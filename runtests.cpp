@@ -3,7 +3,7 @@
 // change the value below to 1 to run tests against your Complex class.
 // change the value below to 0 to run tests against the built in std::complex.
 
-#if 0
+#if 1
 #include "Complex.h"
 #else
 #include <complex>
