@@ -34,6 +34,7 @@ Complex operator+(const Complex& a, const Complex& b);
 Complex operator-(const Complex& a, const Complex& b);
 Complex operator*(const Complex& a, const Complex& b);
 Complex operator/(const Complex& a, const Complex& b);
+double operator/(const Complex& a, const double r);
 
 // norm returns the squared magnitude of z
 double norm(const Complex& z);
