@@ -87,8 +87,19 @@ int main()
 	
 	e8 -= Complex(5,-5);
 	Assert(e8 == Complex(-3,7), "testing -="); //
-		
+	
+	//double val1,val2,eps;	
+	
+	//bool approx(val1,val2,eps)
+	//{
+	//return abs(val1-val2) < eps;
+	//}
+	
+//	Assert(approx(20,norm(z4),.000001), "approx norm");
+	std::cout<<norm(z4)<<std::endl;
 	Assert(norm(z4) == 20, "complex norm"); //
+	std::cout<<norm(z4)<<std::endl;
+	
 	Assert(norm(z1) == 25, "complex norm");//
 	Assert(conj(z4) == Complex(2,4), "complex conj");//
 	Assert(conj(z6) == Complex(.3,.5), "complex conj");//
