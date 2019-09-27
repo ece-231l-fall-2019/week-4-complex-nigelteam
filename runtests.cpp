@@ -100,6 +100,9 @@ int main()
 	Assert(norm(z1) == 25, "complex norm");//
 	Assert(conj(z4) == Complex(2,4), "complex conj");//
 	Assert(conj(z6) == Complex(.3,.5), "complex conj");//
+	
+	std::cout<<z1;
+	
 	return 0;
 }
 
