@@ -3,7 +3,7 @@
 // change the value below to 1 to run tests against your Complex class.
 // change the value below to 0 to run tests against the built in std::complex.
 
-#if o
+#if 1
 #include "Complex.h"
 #else
 #include <complex>
@@ -59,7 +59,7 @@ int main()
 	Assert((z5 + z2) == ans7, "z5 + z2"); //
 	Assert((z1 - z2) == ans4, "z1 - z2"); //
 	Assert((z2 - z1) == ans9, "z2 - z1"); //
-
+	
 
 	 Complex e1(2,2);
 	 Complex e2(2,2);
@@ -95,17 +95,7 @@ int main()
 	e8 -= Complex(5,-5);
 	Assert(e8 == Complex(-3,7), "testing -="); //
 	
-	//double val1,val2,eps;	
-	
-	//bool approx(val1,val2,eps)
-	//{
-	//return abs(val1-val2) < eps;
-	//}
-	
-//	Assert(approx(20,norm(z4),.000001), "approx norm");
-	//std::cout<<norm(z4)<<std::endl;
 	Assert(round(norm(z4)) == 20, "complex norm"); //
-	//std::cout<<norm(z4)<<std::endl;
 	
 	Assert(norm(z1) == 25, "complex norm");//
 	Assert(conj(z4) == Complex(2,4), "complex conj");//
