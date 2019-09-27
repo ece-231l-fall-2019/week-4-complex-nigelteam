@@ -64,23 +64,16 @@ Complex& Complex::operator-=(const Complex& z)
 }
 Complex& Complex::operator*=(const Complex& z) 
 {
-	Complex rep;
-
-	rep._real = (_real * z.real() - _imag * z.imag());
-	rep._imag = (_real * z.imag() + _imag * z.real());
-	
-	*this = rep; 
+	Complex res ((_real * z.real() - _imag * z.imag()), (_real * z.imag() + _imag * z.real()));
+	*this = res;
 	return *this;
 
 }
 Complex& Complex::operator/=(const Complex& z) 
 {
-	Complex rep;
-
-	rep._real = ((_real * z.real()) + (_imag * z.imag())) / ( norm(z) );
-        rep._imag = ((_imag * z.real()) - (_real * z.imag())) / ( norm(z) );
-
-	*this = rep;
+	Complex res ( ((_real * z.real()) + (_imag * z.imag())) / ( norm(z) ),
+                      ((_imag * z.real()) - (_real * z.imag())) / ( norm(z) ) );
+	*this = res;
 	return *this;
 
 }
@@ -162,17 +155,22 @@ bool operator!=(const Complex& a, double r)
 	return false;
 }
 
+double abs( double r)
+{
+	if ( r < 0 )
+		return (r * -1); 
+	return r;
+}
+
 std::ostream& operator<<(std::ostream& out, const Complex& z)
 {
-
+	
 	out << "("
 	    << z.real()
 	    << ")"
-	    << (z.imag() > 0 ? "+" : "") 
+	    << (z.imag() > 0 ? "+" : "-") 
             << "("
-            << z.imag()
-            << ")"
-	    << std::endl;
-	
+            << abs(z.imag())
+            << ")";	
 	return out;
 }
