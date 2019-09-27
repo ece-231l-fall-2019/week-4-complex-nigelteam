@@ -27,6 +27,7 @@ class Complex
 	Complex& operator-=(const Complex& z);
 	Complex& operator*=(const Complex& z);
 	Complex& operator/=(const Complex& z);
+//	Complex operator/(const Complex& a, const double r);
 };
 
 // basic math operations
@@ -34,7 +35,7 @@ Complex operator+(const Complex& a, const Complex& b);
 Complex operator-(const Complex& a, const Complex& b);
 Complex operator*(const Complex& a, const Complex& b);
 Complex operator/(const Complex& a, const Complex& b);
-double operator/(const Complex& a, const double r);
+Complex operator/(const Complex& a, const double r);
 
 // norm returns the squared magnitude of z
 double norm(const Complex& z);
