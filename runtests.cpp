@@ -1,5 +1,5 @@
 #include <iostream>
-#include <math.h>
+//#include <math.h>
 // change the value below to 1 to run tests against your Complex class.
 // change the value below to 0 to run tests against the built in std::complex.
 
@@ -17,7 +17,14 @@ void Assert(bool cond, std::string message)
 	else
 		std::cerr << "FAIL: " << message << std::endl;
 }
+double round(double r)
+{
 
+if ((r + 0.5) >= (int(r)+1))
+	return int(r)+1;
+else
+	return int(r);
+}
 int main()
 {
 	//constructors
