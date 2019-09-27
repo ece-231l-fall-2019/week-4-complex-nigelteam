@@ -110,19 +110,13 @@ Complex operator*(const Complex& a, const Complex& b)
 Complex operator/(const Complex& a, const Complex& b)
 {
 	
-	return Complex ((a * conj(b) / norm(b)) , (a * conj(b) / norm(b)));
+	return ((a * conj(b) / norm(b)));
 
 }
 
-double operator/(const Complex& a, const double r )
+Complex operator/(const Complex& z, const double r )
 {
-	double z1,z2;
-
-	z1 = a.real() / r;
-	z2 = a.imag() / r;
-	
-	return z1 + z2;
-
+	return Complex ((z.real() / r) ,  (z.imag() / r));
 }
 
 double norm( const Complex& z)
