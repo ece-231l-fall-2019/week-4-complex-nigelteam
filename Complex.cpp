@@ -167,10 +167,8 @@ std::ostream& operator<<(std::ostream& out, const Complex& z)
 	
 	out << "("
 	    << z.real()
-	    << ")"
 	    << (z.imag() > 0 ? "+" : "-") 
-            << "("
             << abs(z.imag())
-            << ")";	
+            << "i)";	
 	return out;
 }
